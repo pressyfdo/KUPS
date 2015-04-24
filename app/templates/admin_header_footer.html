@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kups - {{ title }}</title>
+    
+    <!-- Bootstrap -->
+    <link href="http://127.0.0.1:5000/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./evitrack.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://127.0.0.1:5000/static/justified-nav.css" rel="stylesheet">
+     
+  </head>
+  <body>
+    <div class="container">
+   	  <div class="masthead">
+        <div class="btn-group pull-right">
+          <button type="button" class="btn btn-default"><span class="glyphic    on glyphicon-user" aria-hidden="true"></span> {{ user.username }} </button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+          </ul>
+        </div>
+
+        <h1 class="text-muted">Kups</h1>
+ 
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="{{ url_for('admin_page') }}">Home <span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+            <li><a href="{{ url_for('list_users') }}">Users<span class="glyphicon glyphicon-print" aria-hidden="true"></span></a></li>
+            <li><a href="{{ url_for('list_printers') }}">Printers<span class="glyphicon glyphicon-usd" ar    ia-hidden="true"></span></a></li>
+            <li><a href="{{ url_for('uploads') }}">Filter<span class="glyphicon glyphicon-upload" aria-hidden="true"></span></a></li>
+          </ul>
+        </nav>
+        </br>
+        </br>
+	{% block content %}{% endblock %}
+	<center>
+	  <footer class="footer">
+        <p>&copy; Kups 2014</p>
+      </footer>
+    </center>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://127.0.0.1:5000/static/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as ne    eded -->
+    <script src="http://127.0.0.1:5000/static/js/bootstrap.min.js"></script>
+ 
+  </body>
+</html>
+

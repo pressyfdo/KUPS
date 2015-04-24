@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Register User</title>
+</head>
+<body>
+
+</body>
+
+  {% for message in form.fullname.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+   
+  {% for message in form.username.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+   
+  {% for message in form.email.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+   
+  {% for message in form.mobile.errors %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+   
+  <form action="{{ url_for('register_user') }}" method=post>
+    {{ form.hidden_tag() }}
+     
+    {{ form.fullname.label }}
+    {{ form.fullname }}
+     
+    {{ form.username.label }}
+    {{ form.username }}
+     
+    {{ form.email.label }}
+    {{ form.email }}
+     
+    {{ form.mobile.label }}
+    {{ form.mobile }}
+     
+    {{ form.submit }}
+  </form>
+</html>

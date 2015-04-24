@@ -1,0 +1,10 @@
+bin/
+config.py
+config.pyc
+include/
+lib
+
+*.swp
+*~
+*.swo
+*.pyc

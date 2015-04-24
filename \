@@ -1,0 +1,14 @@
+WTF_CSRF_ENABLED = True
+SECRET_KEY = 'somekey'
+
+dbhost = 'localhost'
+dbuser = 'root'
+dbpass = 'computer'
+dbname = 'kups'
+
+SQLALCHEMY_DATABASE_URI  = 'mysql://' + dbuser + ':' + dbpass + '@' + dbhost + '/' + dbname
+
+MAIL_SERVER   = 'smtp.gmail.com'
+MAIL_PORT     = 465
+MAIL_USERNAME = 'pressyfernando@karunya.edu.in'
+MAIL_PASSWORD = 'synthiafdo'

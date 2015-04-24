@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Sign in</title>
+    <link rel="shortcut icon" href="h.png" type="image/png">
+    <link href="http://127.0.0.1:5000/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://127.0.0.1:5000/static/signin.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" method="post" action="" name="form">
+        
+        <center><img src="h.png" alt="logo" width="70" height="70">
+		<h1 class="form-signin-heading">Karunya University Printing System</h1> </br></center>
+        {{ form.hidden_tag() }}
+        <label for="inputtext" class="sr-only">Username</label>
+        <input type="text" id="inputEmail" class="form-control" name="username" placeholder="Username" required autofocus><p></p><p></p>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me" name="remember_me"> Remember me
+          </label>
+        </div>
+        <button  class="btn btn-lg btn-primary btn-block" type="submit">Sign In <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></button>
+      </form></br></br>
+      <center>
+      <footer class="footer">
+        <p>&copy; Kups 2015</p>
+      </footer>
+      </center>
+
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

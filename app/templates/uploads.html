@@ -1,0 +1,28 @@
+{% extends "header_footer.html" %}
+{% block content %}
+  <div>
+    <table class="table table-striped">
+      <tr>
+        <th>S.no </th>
+        <th>Filename </th>
+        <th>Size </th>
+        <th>Pages </th>
+        <th>&nbsp;</th>
+      </tr>
+	  {% set id = 1 %}
+	  {% for file in files %}
+        <tr>
+          <td>{{ id }}</td>
+          <td>{{ file.filename }}</td>
+          <td>{{ file.size }}</td>
+          <td>{{ file.pages }}</td>
+          <td>
+            <a href="{{ url_for('remove_files', filename = file.filename) }}" <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Remove</a>
+          </td>
+	    </tr>
+		{% set id = id + 1 %}
+	  {% endfor %}
+    </table>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "admin_header_footer.html" %}
+{% block content %}
+
+<form method="post" action="{{ url_for('add_printers') }}" name="form">
+<div class="form-group">
+  <label for="Name" class="control-label col-xs-2"> Name</label>
+  <div class="col-xs-10">
+    <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+    </br>
+  </div>
+  <label for="URl" class="control-label col-xs-2"> URL</label>
+  <div class="col-xs-10">
+    <input type="text" name="url" class="form-control" id="url" placeholder="URL">
+    </br>
+  </div>
+  <label for="Model" class="control-label col-xs-2"> Model</label>
+  <div class="col-xs-10">
+    <input type="text" name="model" class="form-control" id="model" placeholder="model">
+    </br>
+  </div>
+  <label for="Department" class="control-label col-xs-2"> Department</label>
+  <div class="col-xs-10">
+    <select class="form-control" name="department">
+      <option value="Computer Science and Engineering">CSE</option>
+      <option value="Information Technology">IT</option>
+    </select>
+    </br>
+  </div>
+  <label for="Location" class="control-label col-xs-2"> Location</label>
+  <div class="col-xs-10">
+    <input type="text" name="location" class="form-control" id="Location" placeholder="Location">
+    </br>
+  </div>
+  <label for="Description" class="control-label col-xs-2"> Description</label>
+  <div class="col-xs-10">
+    <input type="text-area" name="description" class="form-control" id="desc" placeholder="Description">
+    </br>
+  </div>
+  <button type="submit" class="btn btn-lg btn-primary ">Add <span class="glyphicon glyphicon-print" aria-hidden="true"></button>
+</div>
+</form>
+
+
+{% endblock %}
